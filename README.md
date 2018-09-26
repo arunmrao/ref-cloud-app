@@ -30,6 +30,11 @@ Delete every Docker image
 ```
 docker rmi -f $(docker images -q)
 ```
+Inspecting docker IP addresses
+```
+docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' api-service
+```
+
 ### Architecture
 
 ![](readme/diagram.png)
