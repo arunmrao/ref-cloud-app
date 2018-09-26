@@ -1,4 +1,4 @@
-### Introduction
+## Introduction
 
 reference dockerized cloud microservices with spring boot rest, cassandra, kafka &amp; zookeeper
 
@@ -11,7 +11,7 @@ reference dockerized cloud microservices with spring boot rest, cassandra, kafka
 * Kafka
 * REST API
 
-### Developer Environment
+## Developer Environment
 
 Build docker images
 ```
@@ -21,7 +21,15 @@ Run
 ```
 docker-compose up
 ```
-
+Delete every Docker containers
+Must be run first because images are attached to containers
+```
+docker rm -f $(docker ps -a -q)
+```
+Delete every Docker image
+```
+docker rmi -f $(docker images -q)
+```
 ### Architecture
 
 ![](readme/diagram.png)
